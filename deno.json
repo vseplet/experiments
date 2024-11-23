@@ -1,0 +1,6 @@
+{
+
+  "tasks": {
+    "dev": "go run main.go"
+  }
+}
