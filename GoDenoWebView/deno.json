@@ -1,0 +1,18 @@
+{
+  "imports": {
+    "@hono/hono": "jsr:@hono/hono@4.5.6",
+    "@vseplet/reface": "jsr:@vseplet/reface@0.1.0"
+  },
+  "tasks": {
+    "go:run": "go run main.go",
+    "go:build": "go build -o static/libexample.dylib -buildmode=c-shared source/viewlib/main.go",
+    "dev": {
+      "command": "deno -A --unstable-kv ./main.ts",
+      "dependencies": ["go:build"]
+    },
+    "compile": {
+      "command": "deno compile --include static/ --include static/libexample.dylib --include ./source/services/ --output test -A --import-map=import-map.json ./main.ts",
+      "dependencies": ["go:build"]
+    }
+  }
+}

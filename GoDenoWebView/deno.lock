@@ -1,0 +1,24 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@hono/hono@4.5.6": "4.5.6",
+    "jsr:@vseplet/reface@0.1.0": "0.1.0"
+  },
+  "jsr": {
+    "@hono/hono@4.5.6": {
+      "integrity": "6b156968a5f34e97aa96a530ae67740190c1f8a045855342ce289cc5e9ce0a54"
+    },
+    "@vseplet/reface@0.1.0": {
+      "integrity": "2d1a35b141cf771c5547319d9d515a4a95dafb7a1eda84bacf10cdbcb4eb8e98",
+      "dependencies": [
+        "jsr:@hono/hono"
+      ]
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@hono/hono@4.5.6",
+      "jsr:@vseplet/reface@0.1.0"
+    ]
+  }
+}
